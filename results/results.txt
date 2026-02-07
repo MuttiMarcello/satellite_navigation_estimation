@@ -1,0 +1,7 @@
+- 'chaser_uncertainty_propagation_comparison.png' - Propagated chaser uncertainty comparison of Linear, Unscented and Monte Carlo methods after 75 orbits
+- 'target_uncertainty_propagation_comparison.png' - Propagated target uncertainty comparison of Linear, Unscented and Monte Carlo methods after 75 orbits
+- 'batch_lsq_residuals_1station_keplerian.png' - Weighted LSQ residuals, one station measurements, Keplerian dynamics
+- 'batch_lsq_residuals_2stations_keplerian.png' - Weighted LSQ residuals, two stations measurements, Keplerian dynamics
+- 'batch_lsq_residuals_2stations_keplerian_j2.png' - Weighted LSQ residuals, two stations measurements, Keplerian dynamics with J2 perturbation
+- 'absolute_motion_UKF_uncertainty_estimation.png' - Absolute motion UKF uncertainty history, with TLE-data derived estimate errors, Keplerian dynamics with J2 perturbation
+- relative_motion_UKF_uncertainty_estimation.png' - Relative motion UKF uncertainty history, with TLE-data derived estimate errors, Clohessy-Wiltshire dynamics

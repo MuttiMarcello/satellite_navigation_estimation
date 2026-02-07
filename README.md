@@ -1,22 +1,43 @@
 # Satellite Navigation and Estimation
 
-Academic project implementing and assessing uncertainty propagation and navigation filters.
+Individual project implementing and assessing uncertainty propagation and navigation filters for LEO satellite and formation-flying scenarios.
 
 ## Overview
 
 This repository contains three simulation-based studies developed as part of a university satellite navigation project.
 
 The work is organized in three parts:
-1. Comparison of linearized, unscented, and Monte Carlo uncertainty propagation methods
+1. Comparison of linearized, unscented, and Monte Carlo uncertainty propagation methods for a formation-flying satellite pair
 2. Batch filter-based orbit estimation using simulated spacecraft motion and measurements
-3. Relative motion navigation using an Unscented Kalman Filter
+3. Relative CW motion navigation using an Unscented Kalman Filter
 
-The full methodology and results (including plots) are available in 'docs/report.pdf'.
+## Results and Validation
+
+Key results:
+- Linear Transform effective in capturing uncertainty propagation for circular orbits, fails with non-zero eccentricity. Unscented Transform effective over long integration periods, approximating Monte Carlo validation results.
+- Weighted least squares batch filter performance proportional to number of measurements and accuracy of dynamical model. Estimate uncertainty decreases of two order of magnitude adding J2 perturbation to 2BP dynamical model.
+- Absolute motion 2BP+J2 UKF 3-sigma uncertainty converges to ~ 0.3 km, ~ 0.5 m/s in 10 minutes, with measurement period of 5s. Relative motion CW UKF 3-sigma uncertainty converges to ~ 0.001 km, ~ 0.001 m/s in 20 minutes, with measurement period of 5s.
+
+Representative outputs:
+- Covariance ellipses plots, with Monte Carlo samples
+- Batch filter least squares residuals
+- UKF uncertainty history
+
+Representative figures are available in 'results/' (PNG format).
+See 'results/results.txt' for figure-by-figure explanations.
+The full methodology and results are documented in 'docs/report.pdf'.
 
 ## Repository structure
 
 - 'src/' - MATLAB implementations of each study
 - 'docs/' - Project report
+- 'results/' - Key result figures (PNG)
+- 'figures/' - Source figures (EPS)
+
+## Development notes
+
+This repository was uploaded after project completion.
+Commit history does not reflect the original development timeline.
 
 ## Reproducibility and external dependencies
 
